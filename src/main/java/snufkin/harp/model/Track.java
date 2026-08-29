@@ -54,6 +54,22 @@ public class Track {
         this.title = title;
     }
 
+    public Integer getTrackNumber() {
+        return trackNumber;
+    }
+
+    public void setTrackNumber(Integer trackNumber) {
+        this.trackNumber = trackNumber;
+    }
+
+    public Integer getDurationSeconds() {
+        return durationSeconds;
+    }
+
+    public void setDurationSeconds(Integer durationSeconds) {
+        this.durationSeconds = durationSeconds;
+    }
+
     public Album getAlbum() {
         return album;
     }

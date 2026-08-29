@@ -5,19 +5,17 @@ public class TrackDTO {
     private String title;
     private Integer trackNumber;
     private Integer durationSeconds;
-    private String imageUrl;
     private Long albumId;
 
     // Constructors
     public TrackDTO() {
     }
 
-    public TrackDTO(Long id, String title, Integer trackNumber, Integer durationSeconds, String imageUrl, Long albumId) {
+    public TrackDTO(Long id, String title, Integer trackNumber, Integer durationSeconds, Long albumId) {
         this.id = id;
         this.title = title;
         this.trackNumber = trackNumber;
         this.durationSeconds = durationSeconds;
-        this.imageUrl = imageUrl;
         this.albumId = albumId;
     }
 
@@ -54,19 +52,8 @@ public class TrackDTO {
         this.durationSeconds = durationSeconds;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-    }
-
     public Long getAlbumId() {
         return albumId;
     }
 
-    public void setAlbumId(Long albumId) {
-        this.albumId = albumId;
-    }
 }
