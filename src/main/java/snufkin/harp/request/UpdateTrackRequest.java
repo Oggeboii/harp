@@ -3,16 +3,18 @@ package snufkin.harp.request;
 public class UpdateTrackRequest {
     private String title;
     private String description;
-    private String imageUrl;
+    private Integer trackNumber;
+    private Integer durationSeconds;
+    private Long albumId;
+
 
     // Constructors
     public UpdateTrackRequest() {
     }
 
-    public UpdateTrackRequest(String title, String description, String imageUrl) {
+    public UpdateTrackRequest(String title, String description) {
         this.title = title;
         this.description = description;
-        this.imageUrl = imageUrl;
     }
 
     // Getters and Setters
@@ -32,11 +34,28 @@ public class UpdateTrackRequest {
         this.description = description;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public Integer getTrackNumber() {
+        return trackNumber;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setTrackNumber(Integer trackNumber) {
+        this.trackNumber = trackNumber;
     }
+
+    public Integer getDurationSeconds() {
+        return durationSeconds;
+    }
+
+    public void setDurationSeconds(Integer durationSeconds) {
+        this.durationSeconds = durationSeconds;
+    }
+
+    public Long getAlbumId() {
+        return albumId;
+    }
+
+    public void setAlbumId(Long albumId) {
+        this.albumId = albumId;
+    }
+
 }

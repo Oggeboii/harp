@@ -2,7 +2,8 @@ package snufkin.harp.request;
 
 public class CreateTrackRequest {
     private String title;
-    private String description;
+    private Integer trackNumber;
+    private Integer durationSeconds;
     private String imageUrl;
     private Long albumId;
 
@@ -10,9 +11,10 @@ public class CreateTrackRequest {
     public CreateTrackRequest() {
     }
 
-    public CreateTrackRequest(String title, String description, String imageUrl, Long albumId) {
+    public CreateTrackRequest(String title, Integer trackNumber, Integer durationSeconds, String imageUrl, Long albumId) {
         this.title = title;
-        this.description = description;
+        this.trackNumber = trackNumber;
+        this.durationSeconds = durationSeconds;
         this.imageUrl = imageUrl;
         this.albumId = albumId;
     }
@@ -26,12 +28,20 @@ public class CreateTrackRequest {
         this.title = title;
     }
 
-    public String getDescription() {
-        return description;
+    public Integer getTrackNumber() {
+        return trackNumber;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setTrackNumber(Integer trackNumber) {
+        this.trackNumber = trackNumber;
+    }
+
+    public Integer getDurationSeconds() {
+        return durationSeconds;
+    }
+
+    public void setDurationSeconds(Integer durationSeconds) {
+        this.durationSeconds = durationSeconds;
     }
 
     public String getImageUrl() {
