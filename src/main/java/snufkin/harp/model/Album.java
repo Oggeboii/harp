@@ -1,5 +1,6 @@
 package snufkin.harp.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
@@ -37,10 +38,12 @@ public class Album {
 
     // Constructors
     public Album() {
+        this.tracks = new ArrayList<>();
     }
 
     public Album(String title) {
         this.title = title;
+        this.tracks = new ArrayList<>();
     }
 
     // Getters and Setters
