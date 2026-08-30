@@ -8,6 +8,7 @@ import jakarta.transaction.Transactional;
 import snufkin.harp.dto.AlbumDTO;
 import snufkin.harp.model.Album;
 import snufkin.harp.repository.AlbumRepository;
+import snufkin.harp.repository.ArtistRepository;
 import snufkin.harp.request.CreateAlbumRequest;
 import snufkin.harp.request.UpdateAlbumRequest;
 
@@ -15,9 +16,11 @@ import snufkin.harp.request.UpdateAlbumRequest;
 public class AlbumService {
     
     private final AlbumRepository albumRepository;
+    private final ArtistRepository artistRepository;
 
-    public AlbumService(AlbumRepository albumRepository) {
+    public AlbumService(AlbumRepository albumRepository, ArtistRepository artistRepository) {
         this.albumRepository = albumRepository;
+        this.artistRepository = artistRepository;
     }
 
     @Transactional
@@ -26,6 +29,7 @@ public class AlbumService {
         album.setTitle(albumRequest.getTitle());
         album.setDescription(albumRequest.getDescription());
         album.setImageUrl(albumRequest.getImageUrl());
+        album.setArtist(artistRepository.getArtistById(albumRequest.getArtistId()));
         albumRepository.save(album);
         return new AlbumDTO(album.getId(), album.getTitle(), album.getDescription(), album.getImageUrl(), album.getArtist().getId());
     }
