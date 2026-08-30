@@ -28,6 +28,7 @@
 	</scm>
 	<properties>
 		<java.version>21</java.version>
+		<camel.version>4.22.0</camel.version>
 	</properties>
 	<dependencies>
 
@@ -52,6 +53,25 @@
         <artifactId>spring-boot-starter-webmvc-test</artifactId>
         <scope>test</scope>
     </dependency>
+
+	<dependency>
+		<groupId>org.apache.camel.springboot</groupId>
+		<artifactId>camel-spring-boot-starter</artifactId>
+		<version>${camel.version}</version>
+	</dependency>
+
+	<dependency>
+    <groupId>org.apache.camel.springboot</groupId>
+    <artifactId>camel-servlet-starter</artifactId>
+    <version>${camel.version}</version>
+	</dependency>
+
+	<dependency>
+    <groupId>org.apache.camel.springboot</groupId>
+    <artifactId>camel-jackson-starter</artifactId>
+    <version>${camel.version}</version>
+</dependency>
+
 
 </dependencies>
 
