@@ -1,0 +1,11 @@
+type Artist {
+    id: ID!
+    name: String!
+    description: String
+    imageUrl: String
+}
+
+type Query {
+    artists: [Artist!]!
+    artist(id: ID!): Artist
+}

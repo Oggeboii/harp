@@ -61,17 +61,27 @@
 	</dependency>
 
 	<dependency>
-    <groupId>org.apache.camel.springboot</groupId>
-    <artifactId>camel-servlet-starter</artifactId>
-    <version>${camel.version}</version>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-graphql</artifactId>
 	</dependency>
 
 	<dependency>
-    <groupId>org.apache.camel.springboot</groupId>
-    <artifactId>camel-jackson-starter</artifactId>
-    <version>${camel.version}</version>
-</dependency>
+		<groupId>org.apache.camel.springboot</groupId>
+		<artifactId>camel-servlet-starter</artifactId>
+		<version>${camel.version}</version>
+	</dependency>
 
+	<dependency>
+		<groupId>org.apache.camel.springboot</groupId>
+		<artifactId>camel-jackson-starter</artifactId>
+		<version>${camel.version}</version>
+	</dependency>
+
+	<dependency>
+		<groupId>io.github.cdimascio</groupId>
+		<artifactId>dotenv-java</artifactId>
+		<version>3.0.0</version>
+	</dependency>
 
 </dependencies>
 
